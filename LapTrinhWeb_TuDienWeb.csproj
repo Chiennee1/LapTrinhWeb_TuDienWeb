@@ -75,6 +75,12 @@
     <Content Include="App_Code\DTO\User.cs" />
     <Content Include="App_Code\DTO\SearchHistory.cs" />
     <Content Include="App_Code\DTO\Favorite.cs" />
+    <Content Include="App_Code\DAL\DatabaseHelper.cs" />
+    <Content Include="App_Code\DAL\UserRepository.cs" />
+    <Content Include="App_Code\DAL\WordRepository.cs" />
+    <Content Include="App_Code\DAL\HistoryRepository.cs" />
+    <Content Include="App_Code\DAL\FavoriteRepository.cs" />
+    <Content Include="App_Code\BLL\UserService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,8 +114,6 @@
   <ItemGroup>
     <Folder Include="Admin\" />
     <Folder Include="AppData\" />
-    <Folder Include="App_Code\BLL\" />
-    <Folder Include="App_Code\DAL\" />
     <Folder Include="Client\" />
     <Folder Include="Content\audio\" />
     <Folder Include="Content\css\" />
