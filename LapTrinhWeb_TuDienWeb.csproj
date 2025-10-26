@@ -71,6 +71,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\BLL\WordService.cs" />
+    <Content Include="App_Code\BLL\SearchService.cs" />
+    <Compile Include="Utils\SecurityHelper.cs" />
     <Content Include="App_Code\DTO\Word.cs" />
     <Content Include="App_Code\DTO\User.cs" />
     <Content Include="App_Code\DTO\SearchHistory.cs" />
@@ -81,6 +84,7 @@
     <Content Include="App_Code\DAL\HistoryRepository.cs" />
     <Content Include="App_Code\DAL\FavoriteRepository.cs" />
     <Content Include="App_Code\BLL\UserService.cs" />
+    <Content Include="App_Code\BLL\ServiceResult.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -120,7 +124,6 @@
     <Folder Include="Content\images\" />
     <Folder Include="Content\Scripts\" />
     <Folder Include="Controls\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
