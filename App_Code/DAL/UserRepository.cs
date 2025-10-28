@@ -202,6 +202,11 @@ namespace LapTrinhWeb_TuDienWeb.App_Code.DAL
 
             return users;
         }
+        public static int GetTotalUsers()
+        {
+            string query = "SELECT COUNT(*) FROM Users WHERE IsActive = 1";
+            return Convert.ToInt32(DatabaseHelper.ExecuteScalar(query));
+        }
         // Kiểm tra email đã tồn tại chưa
         public static bool IsEmailExists(string email)
         {
