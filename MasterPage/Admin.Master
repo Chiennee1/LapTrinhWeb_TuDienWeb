@@ -1,18 +1,38 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="LapTrinhWeb_TuDienWeb.MasterPage.Admin" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="LapTrinhWeb_TuDienWeb.MasterPage.Admin" %>
 
 <!DOCTYPE html>
-
-<html>
+<html lang="vi">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>Trang quản trị | <asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="~/Content/admin.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div class="admin-layout">
+            
+            <aside class="admin-sidebar">
+                <h2>🔹 Từ Điển Web</h2>
+                <ul>
+                    <li><a href="~/Admin/Dashboard.aspx">📊 Bảng điều khiển</a></li>
+                    <li><a href="~/Admin/ManageWords.aspx">📘 Quản lý từ điển</a></li>
+                    <li><a href="~/Admin/ManageUsers.aspx">👤 Quản lý người dùng</a></li>
+                    <li><a href="~/Admin/Statistics.aspx">📈 Thống kê</a></li>
+                    <li><a href="~/Admin/Import.aspx">📂 Nhập dữ liệu</a></li>
+                </ul>
+                <div class="logout-box">
+                    <asp:Button ID="btnLogout" runat="server" Text="Đăng xuất" CssClass="btn-logout" />
+                </div>
+            </aside>
+
+       
+            <main class="admin-main">
+                <header class="admin-header">
+                    <h1><asp:ContentPlaceHolder ID="PageTitle" runat="server" /></h1>
+                </header>
+                <section class="admin-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </section>
+            </main>
         </div>
     </form>
 </body>
